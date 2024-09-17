@@ -1,0 +1,6 @@
+#Description: returns a list of all files modified within the last day
+#Name: Veer Waje
+#Date: 3/26/2024
+#Class: CS 3377.007
+
+find . -mtime -1

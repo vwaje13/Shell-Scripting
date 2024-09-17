@@ -1,0 +1,7 @@
+#Description: removes all fire named "core" from home directory
+#Name: Veer Waje
+#Class: CS 3377.007
+#Date: 3/26/24
+
+cd $HOME
+find . -type f -name 'core' -exec rm {} +

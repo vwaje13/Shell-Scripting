@@ -1,0 +1,7 @@
+#Description: lists all files that user has read access to and
+# has size greater than 1mb
+#Name: Veer Waje
+#Class: CS 3377.007
+#Date: 3/26/24
+
+find / -type f -size +1M -readable 2>&1 | grep -v 'Permission denied'

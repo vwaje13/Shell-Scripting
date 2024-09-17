@@ -1,0 +1,7 @@
+#Description: lists all the inode numbers of 
+#all files in the working directory whose filenames end in .c.
+#Name: Veer Waje
+#Class: CS 3377.007
+#Date: 3/26/24
+
+find . -maxdepth 1 -type f -name "*.c" -printf "%i"

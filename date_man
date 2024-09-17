@@ -1,0 +1,12 @@
+#Description: prints the date every 15 seconds and clears the screen each time
+#Name: Veer Waje
+#Date: 03/26/2024
+#Class: CS 3377.007
+
+echo "use ^C to stop the command"
+while [ true ]
+do
+	clear
+	date "+%r"
+	sleep 15
+done

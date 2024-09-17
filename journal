@@ -1,0 +1,24 @@
+#Description: add journal entries to the file $HOME/journal-file
+#Name: Veer Waje
+#Course: CS 3377.007
+#Date: 03/25/2024
+
+file=$HOME/journal-file
+date >> $file
+if [ -e "$file" ]
+then
+	if [ -w "$file" ]
+	then
+		echo -n "Enter name of person or group: "
+		read name
+		echo "$name" >> $file
+		echo >> $file
+		cat >> $file
+		echo "----------------------------------------------------" >> $file
+
+   	else
+		echo "you do not have permission to write to the file"
+	fi
+else 
+	echo "you do not have permissions to create the file"
+fi

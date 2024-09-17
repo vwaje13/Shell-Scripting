@@ -1,0 +1,28 @@
+#Description: takes the name of a directory as an argument and searches the
+# file hierarchy rooted at that directory for zero-length files. Writes
+# the names of all zero-length files to standard output. 
+#If there is no option on the command line, have the script delete
+# the file after displaying its name, asking
+# the user for confirmation, and receiving positive confirmation.
+#Name: Veer Waje
+#Class: CS 3377.007
+#Date: 3/26/24
+delete_file() {
+	echo -n "Do you want to delete $1? (y/n) "
+	read answer
+	if [ "$answer" == "y" ]; then
+		rm "$1"
+		echo "$1 deleted."
+	fi
+}
+if [ -z "$1" ]; then
+	echo "Please provide a directory."
+	exit 1
+fi
+find "$1" -type f -empty | while read -r file; do
+	echo "$file"
+	if [ "$2" != "-f" ]; then
+		delete_file "$file"
+	fi
+done
+

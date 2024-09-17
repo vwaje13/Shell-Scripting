@@ -1,0 +1,7 @@
+#Description: lists all files user has access on system
+# that have been modified in the last 30 days
+#Name: Veer Waje
+#Class: CS 3377.007
+#Date: 3/26/24
+
+find / -type f -readable -mtime -30 2>/dev/null
